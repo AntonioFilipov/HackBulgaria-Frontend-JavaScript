@@ -66,7 +66,3 @@ prompt.start();
 var generatedNumber = parseInt(getRandomInt(1000,9999));
 console.log("Generated number:"+generatedNumber);
 promptNumber();
-
-
-
-//findBullsCows(generatedNumber,inputNumber);
