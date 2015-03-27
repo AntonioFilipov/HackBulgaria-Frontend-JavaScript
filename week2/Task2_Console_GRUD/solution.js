@@ -70,7 +70,7 @@ function save()
 function load()
 {
     var file = 'data/users.json';
-    collection = util.inspect(jf.readFileSync(file));
+    collection = jf.readFileSync(file);
     promptCommand();
 }
 
