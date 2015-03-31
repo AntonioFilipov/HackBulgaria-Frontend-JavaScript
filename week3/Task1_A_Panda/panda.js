@@ -1,10 +1,14 @@
 function Panda (name, sex){
     this.name = name;
     if(sex !== "male" || sex !== "female"){
-        sex = female;
+        throw {
+            "name":"ArgumentEXception",
+            "message":"Invalid sex!"
+        }
     }
     this.sex = sex;
     this.weight = 20;
+    this.isLazy = false;
 }
 
 Panda.prototype.toString = function(){
@@ -21,8 +25,9 @@ Panda.prototype.isFemale = function(){
 
 Panda.prototype.eat = function(bamboo){
     this.weight+=bamboo/2;
-    if(this.weight>80){
+    if(this.weight>80 && !this.isLazy){
         this.name = "Lazy Panda " + this.name;
+        this.isLazy = true;
     }
 }
 
@@ -42,16 +47,15 @@ Panda.prototype.mate = function(panda){
 }
 
 var ivo = new Panda("Ivo","male");
+console.log(ivo.toString());
 var ivanka = new Panda("Ivanka", "female");
 ivo.weight = 20;
 ivanka.weight = 20;
-console.log(ivo.toString());
 console.log(ivanka.toString());
 // ivo.eat(80);
 // console.log(ivo.weight);
 // ivo.eat(60);
 // console.log(ivo.toString());
-
 var ivan = ivo.mate(ivanka);
 console.log(ivan.toString());
 
