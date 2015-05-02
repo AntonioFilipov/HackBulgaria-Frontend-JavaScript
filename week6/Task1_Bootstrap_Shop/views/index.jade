@@ -1,0 +1,31 @@
+html
+  head
+    meta(http-equiv="Content-Type", content="text/html; charset=windows-1251")
+    link(href="stylesheet.css", type="text/css", rel="stylesheet")
+    link(href="lib/bootstrap/dist/css/bootstrap.min.css", rel="stylesheet", media="screen")
+    title Дрехи за всеки
+  body.container-fluid
+      div.row
+          // HEADER
+          header.col-xs-12#header
+              h1 Ultra Shop
+      div.row
+          div.col-md-4#navItem
+              ul.nav.nav-stacked
+                  li.active: a(href="#") Item1
+                  li: a(href="#") Item2
+                  li: a(href="#") Item3
+                  li: a(href="#") Item4
+                  li: a(href="#") Item5
+          div.col-md-3#navProduct
+               div.thumbnail
+                    img(src="http://s.twistynoodle.com/img/r/shirt/clothes/clothes_coloring_page.png?ctok=20120311170934")
+                    div.caption
+                        h3 Product
+                        a(href="#").btn.btn-success Button
+          div.col-md-3#navProduct
+               div.thumbnail
+                    img(src="http://s.twistynoodle.com/img/r/shirt/clothes/clothes_coloring_page.png?ctok=20120311170934")
+                    div.caption
+                        h3 Product
+                        a(href="#").btn.btn-success Button
