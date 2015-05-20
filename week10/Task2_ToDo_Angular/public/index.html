@@ -1,0 +1,25 @@
+<HTML>
+<HEAD>
+    <TITLE>Your Title Here</TITLE>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</HEAD>
+<BODY BGCOLOR="FFFFFF">
+<div id="container" ng-app ng-init="tasks=[]" >
+    <h1>TODO App</h1>
+    <form action="#" ng-submit="tasks.push(task)">
+        <input type="text" placeholder="Enter name" ng-model="task">
+        <button type="submit">Add</button>
+    </form>
+    <ul>
+        <li ng-repeat="task in tasks"> {{task}}</li>
+    </ul>
+</div>
+<script src="lib/angular/angular.js"></script>
+</BODY>
+</HTML>
+
+<!-- ng-app - къде да бъде стартиран angular
+ng-init - еквивалентно на document.ready()
+ng-submit - на формата събмита
+ng-model - какъв е моделът който да баде събмитнат
+ng-repeat - обхожда tasks -->
