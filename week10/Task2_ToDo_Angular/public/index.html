@@ -11,7 +11,7 @@
         <button type="submit">Add</button>
     </form>
     <ul>
-        <li ng-repeat="task in tasks"> {{task}}</li>
+        <li ng-repeat="task in tasks track by $index"> {{task}}</li>
     </ul>
 </div>
 <script src="lib/angular/angular.js"></script>
