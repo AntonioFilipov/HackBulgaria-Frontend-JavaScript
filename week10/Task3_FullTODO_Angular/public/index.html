@@ -1,0 +1,33 @@
+<HTML>
+<HEAD>
+    <TITLE>Your Title Here</TITLE>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <style>
+    </style>
+</HEAD>
+<BODY BGCOLOR="FFFFFF">
+<div id="container" ng-app ng-init="tasks=[]" ng-controller="MainCtrl">
+    <h1>TODO App</h1>
+    <form action="#" ng-submit="addTask(task)">
+        <input type="text" placeholder="Enter name" ng-model="task">
+        <button type="submit">Add</button>
+    </form>
+    <ul>
+        <li ng-repeat="oneTask in tasks track by $index" >
+            <input type="checkbox" ng-click="finishTask($index)">{{oneTask}}
+            <a href="#" ng-click="editTask($index, task)">Edit</a>
+            <a href="#" ng-click="removeTask($index)">Delete</a>
+        </li>
+    </ul>
+
+</div>
+<script src="lib/angular/angular.js"></script>
+<script src="js/main.js"></script>
+</BODY>
+</HTML>
+
+<!-- ng-app - къде да бъде стартиран angular
+ng-init - еквивалентно на document.ready()
+ng-submit - на формата събмита
+ng-model - какъв е моделът който да баде събмитнат
+ng-repeat - обхожда tasks -->
